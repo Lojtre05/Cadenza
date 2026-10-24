@@ -38,3 +38,10 @@ jobs:
 
       - name: Test
         run: ctest --test-dir build-msvc --output-on-failure
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cadenza-Zvanicni-Exe
+          path: build-msvc/Cadenza_artefacts/Debug/
+
