@@ -31,7 +31,7 @@ jobs:
         uses: seanmiddleditch/gha-setup-ninja@v5
 
       - name: Configure
-        run: cmake -S . -B build-msvc -G Ninja -DCMAKE_BUILD_TYPE=Release
+        run: cmake -S . -B build-msvc -G Ninja -DCMAKE_BUILD_TYPE=Release -DJUCE_ASIO=ON
 
       - name: Build
         run: cmake --build build-msvc
